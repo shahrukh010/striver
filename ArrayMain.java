@@ -7,6 +7,7 @@ public class ArrayMain{
 
         Array array = new Array();
 
+        /*
         int[][] input = {{1,1,1,1},{1,0,1,1},{1,1,0,1},{0,0,0,1}};
         array.setMatrixZero(input);
 
@@ -19,5 +20,11 @@ public class ArrayMain{
         }
         List<List<Integer>> res = array.pascalTriangle(5);
         res.forEach((r)->System.out.println(r));
+        */
+
+
+        int[] input =  {1,3,5,4,2};
+        int[] result = array.nextPermutation(input);
+        System.out.println(java.util.Arrays.toString(result));
     }
 }

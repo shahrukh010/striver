@@ -61,6 +61,42 @@ public class Array{
 
         return res;
     }
+
+
+
+    public int[] nextPermutation(int[]input){
+
+        if(input==null || input.length<=1)return input;
+
+        int i = input.length-2;//because of i want to check first index from last which is greater then i+1
+
+        while(i>=0 && input[i]>=input[i+1])i--;
+
+        if(i>=0){
+
+            int j = input.length-1;//find second index from last which is greater then first index(i)
+
+            while(input[j]<=input[i])j--;
+            swap(input,i,j);
+        }
+        reverse(input,i+1,input.length-1);
+        return input;
+    }
+
+    private void swap(int[]input,int i ,int j){
+
+        int tmp = input[i];
+        input[i] = input[j];
+        input[j] = tmp;
+    }
+
+    private void reverse(int[] input,int i, int j){
+
+        while(i<j){
+            swap(input,i++,j--);
+        }
+    }
 }
+
 
 
