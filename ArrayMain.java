@@ -1,5 +1,6 @@
 
 import com.code.array.Array;
+import java.util.*;
 public class ArrayMain{
 
     public static void main(String...strings){
@@ -16,5 +17,7 @@ public class ArrayMain{
             }
             System.out.println();
         }
+        List<List<Integer>> res = array.pascalTriangle(5);
+        res.forEach((r)->System.out.println(r));
     }
 }
