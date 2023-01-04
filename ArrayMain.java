@@ -26,5 +26,12 @@ public class ArrayMain{
         int[] input =  {1,3,5,4,2};
         int[] result = array.nextPermutation(input);
         System.out.println(java.util.Arrays.toString(result));
+
+        System.out.println();
+        System.out.println();
+
+        int[] nums = {1,0,1,0,2,1,2};
+         array.sortGivenArrayWithoutSortFun(nums);
+         System.out.println(java.util.Arrays.toString(nums));
     }
 }

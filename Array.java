@@ -96,6 +96,39 @@ public class Array{
             swap(input,i++,j--);
         }
     }
+
+    public void sortGivenArrayWithoutSortFun(int[]input){
+
+        int left = 0;
+        int right = input.length-1;
+        int mid = 0;
+
+        while(mid<=right){
+
+            switch(input[mid]){
+
+                case 0:
+                    if(input[left]!=input[mid]){
+                        
+                        swap(input,left,mid);
+                    }
+                    left++;
+                    mid++;
+                    break;
+                case 1:
+                    mid++;
+                    break;
+                case 2:
+                    if(input[mid] !=input[right]){
+                        
+                        swap(input,mid,right);
+                    }
+                    right--;
+                    break;
+            }
+        }
+    }
+
 }
 
 
